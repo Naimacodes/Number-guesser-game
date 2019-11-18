@@ -1,6 +1,6 @@
 let min = 1,
     max = 10,
-    winningNum = 2,
+    winningNum = Math.floor(Math.random() * (max - min + 1) + min) ,
     guessesLeft = 3;
 
 const game = document.querySelector('#game');
@@ -51,5 +51,6 @@ function gameOver(won, msg){
   won === true ? color = "green" : color = "red";
   guessInput.disabled = true;
   guessInput.style.borderColor = color;
-  setMessage(msg,color);
+  message.style.color = color;
+  setMessage(msg);
 }

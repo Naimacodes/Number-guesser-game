@@ -51,5 +51,5 @@ function gameOver(won, msg){
   won === true ? color = "green" : color = "red";
   guessInput.disabled = true;
   guessInput.style.borderColor = color;
-  setMessage(msg);
+  setMessage(msg,color);
 }

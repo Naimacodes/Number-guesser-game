@@ -20,7 +20,13 @@ guessBtn.addEventListener('click', function(){
     setMessage(`Please enter a number between  ${min} and ${max}.`, 'red');
   }
 
- 
+  if (guess === winningNum) {
+    guessInput.disabled = true;
+    guessInput.style.borderColor= 'green';
+    setMessage(`${winningNum} is correct! You win!`,'green');
+  } else {
+    
+  }
 });
 
 function setMessage(msg, color){
